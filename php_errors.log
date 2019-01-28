@@ -1,0 +1,1 @@
+[28-Jan-2019 08:40:32 UTC] PHP Fatal error:  Cannot declare class App\Controller\TotoController, because the name is already in use in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 7
