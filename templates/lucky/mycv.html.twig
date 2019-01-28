@@ -61,11 +61,10 @@
 			</div>
 			
 			<div class="sectionContent">
-				{% for i in 0..3 %}
+				{% for experience in experiences %}
 				<article>
-					<h2>Job Title {{i}} at Company</h2>
+					<h2>{{experience.getTitle}}</h2>
 					<p class="subDetails">April 2011 - Present</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
 				</article>
 				{% endfor %}
 				
