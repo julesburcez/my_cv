@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use App\Entity\Experiences;
+use App\Entity\Experience;
 
 class TotoController extends Controller
 {
@@ -30,7 +30,7 @@ class TotoController extends Controller
     {
      $number = random_int(0, 100); 
      $experiences = $this->getDoctrine()
-            ->getRepository(Experiences::class)->findAll();
+            ->getRepository(Experience::class)->findAll();
     
         if (!$experiences) {
             throw $this->createNotFoundException(
@@ -45,5 +45,19 @@ class TotoController extends Controller
             'prename' => $prename,
             'experiences' => $experiences,
         ));
+    }
+    
+    public function BDD(){
+
+    $DateDebut="14-05-2015";
+    $DateFin="21-05-2015";
+    
+    $xp = new Experience();
+    $xp->setTitle(‘Dentiste’);
+    $xp->setDateDebut=(\DateTime::createFromFormat('d-m-y',$DateDebut));
+    $xp->setDateFin=(\DateTime::createFromFormat('d-m-y',$DateFin));
+    $eManager = $this->getDoctrine()->getManager();
+    $eManager->persist($xp);
+    $eManager->flush();
     }
 }
