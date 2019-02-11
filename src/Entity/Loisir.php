@@ -18,7 +18,7 @@ class Loisir
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\Type("string")
+     * @Assert\NotBlank
      */
     private $id;
 
@@ -68,8 +68,6 @@ class Loisir
 
         return $this;
     }
-    
-    
 
     public function getApport(): ?string
     {

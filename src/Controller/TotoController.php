@@ -40,7 +40,7 @@ class TotoController extends Controller
             );
         }
         
-        $formations = $this->getDoctrine()
+    $formations = $this->getDoctrine()
             ->getRepository(Formations::class)->findAll();
     
         if (!$formations) {
@@ -49,7 +49,7 @@ class TotoController extends Controller
             );
         }
         
-        $loisirs = $this->getDoctrine()
+    $loisirs = $this->getDoctrine()
             ->getRepository(Loisir::class)->findAll();
     
         if (!$loisirs) {

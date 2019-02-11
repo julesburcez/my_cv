@@ -67,6 +67,9 @@
 					<p class="subDetails">{{ experience.getDatedebut()|date('Y-m-d') }}
 										  {{ experience.getDatefin|date('Y-m-d') }}</p>
 				</article>
+				<a href="{{ path('experience_new') }}" target="_blank">Créer</a>
+				<a href="{{ path('experience_edit',{'id': experience.id}) }}" target="_blank">Editer</a>
+				<a href="{{ path('experience_delete',{'id': experience.id}) }}" target="_blank">Supprimer</a>
 				{% endfor %}
 				
 			</div>
@@ -85,6 +88,9 @@
 					<p class="subDetails">{{ formation.getDatedebut()|date('Y-m-d') }}
 										  {{ formation.getDatefin|date('Y-m-d') }}</p>
 				</article>
+				<a href="{{ path('formations_new') }}" target="_blank">Créer</a>
+				<a href="{{ path('formations_edit',{'id': formation.id}) }}" target="_blank">Editer</a>
+				<a href="{{ path('formations_delete',{'id': formation.id}) }}" target="_blank">Supprimer</a>
 				{% endfor %}
 				
 			</div>
@@ -103,7 +109,9 @@
 					<p class="subDetails">{{ loisir.getYear()|date('Y-m-d') }}</p>
 					<p class="subDetails">{{ loisir.getApport }}</p>
 				</article>
-				<a href="https://symfony-julesbur.c9users.io/my_cv/public/index.php/loisir/create" target="_blank">Créer</a>
+				<a href="{{ path('loisir_new') }}" target="_blank">Créer</a>
+				<a href="{{ path('loisir_edit',{'id': loisir.id}) }}" target="_blank">Editer</a>
+				<a href="{{ path('loisir_delete',{'id': loisir.id}) }}" target="_blank">Supprimer</a>
 				{% endfor %}
 				
 			</div>

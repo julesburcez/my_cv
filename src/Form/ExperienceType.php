@@ -2,26 +2,26 @@
 
 namespace App\Form;
 
-use App\Entity\Loisir;
+use App\Entity\Experience;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class LoisirType extends AbstractType
+class ExperienceType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('title')
-            ->add('year')
-            ->add('apport')
+            ->add('datedebut')
+            ->add('datefin')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Loisir::class,
+            'data_class' => Experience::class,
         ]);
     }
 }

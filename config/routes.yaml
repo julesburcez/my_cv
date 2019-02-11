@@ -12,26 +12,18 @@ app_lucky_number:
     path: /
     controller: App\Controller\TotoController::number
     
-create_exp:
-    path: /exp/create
-    controller: App\Controller\TotoController::bd
-    
-creat_forma:
-    path: /forma/create
-    controller: App\Controller\TotoController::bd
-    
 create_loisir:
     path: /loisir/create
     controller: App\Controller\LoisirController::create
     
 edite_loisir:
-    path: /bd/edit/{id}
+    path: /loisir/edit/{id}
     controller: App\Controller\LoisirController::edit
 
-remove_loisir:
-    path: /bd/remove/{id}
-    controller: App\Controller\LoisirController::remove
+loisir_delete:
+    path: /loisir/remove/{id}
+    controller: App\Controller\LoisirController::delete
     
 valid_loisir:
-    path: /bd/valid
+    path: /loisir/valid
     controller: App\Controller\LoisirController::valid
