@@ -5,7 +5,8 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\Experience;
-
+use App\Entity\Formations;
+use App\Entity\Loisir;
 class TotoController extends Controller
 {
     // public function number()
@@ -26,9 +27,10 @@ class TotoController extends Controller
     //     ));
     // }
     
-    public function number($name,$prename)
+    public function number()
     {
      $number = random_int(0, 100); 
+    
      $experiences = $this->getDoctrine()
             ->getRepository(Experience::class)->findAll();
     
@@ -37,15 +39,34 @@ class TotoController extends Controller
                 'No experiences found for id '
             );
         }
+        
+        $formations = $this->getDoctrine()
+            ->getRepository(Formations::class)->findAll();
+    
+        if (!$formations) {
+            throw $this->createNotFoundException(
+                'No formations found for id '
+            );
+        }
+        
+        $loisirs = $this->getDoctrine()
+            ->getRepository(Loisir::class)->findAll();
+    
+        if (!$loisirs) {
+            throw $this->createNotFoundException(
+                'No loisirs found for id '
+            );
+        }
 
         return $this->render('lucky/mycv.html.twig', array(
             
-            'name' => $name,
             'number' => $number,
-            'prename' => $prename,
             'experiences' => $experiences,
+            'formations' => $formations,
+            'loisirs' => $loisirs,
         ));
     }
+
     
     public function BDD(){
 

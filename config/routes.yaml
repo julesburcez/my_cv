@@ -9,5 +9,29 @@
 
 # the "app_lucky_number" route name is not important yet
 app_lucky_number:
-    path: /{prename}{name}
+    path: /
     controller: App\Controller\TotoController::number
+    
+create_exp:
+    path: /exp/create
+    controller: App\Controller\TotoController::bd
+    
+creat_forma:
+    path: /forma/create
+    controller: App\Controller\TotoController::bd
+    
+create_loisir:
+    path: /loisir/create
+    controller: App\Controller\LoisirController::create
+    
+edite_loisir:
+    path: /bd/edit/{id}
+    controller: App\Controller\LoisirController::edit
+
+remove_loisir:
+    path: /bd/remove/{id}
+    controller: App\Controller\LoisirController::remove
+    
+valid_loisir:
+    path: /bd/valid
+    controller: App\Controller\LoisirController::valid

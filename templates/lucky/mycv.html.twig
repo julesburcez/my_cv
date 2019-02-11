@@ -26,7 +26,7 @@
 		</div>
 		
 		<div id="name">
-			<h1 class="quickFade delayTwo">{{prename}}{{name}}</h1>
+			<h1 class="quickFade delayTwo">Jules Burcez</h1>
 			<h2 class="quickFade delayThree">Job Title {{number}}</h2>
 		</div>
 		
@@ -64,24 +64,52 @@
 				{% for experience in experiences %}
 				<article>
 					<h2>{{experience.getTitle}}</h2>
-					<p class="subDetails">April 2011 - Present</p>
+					<p class="subDetails">{{ experience.getDatedebut()|date('Y-m-d') }}
+										  {{ experience.getDatefin|date('Y-m-d') }}</p>
 				</article>
 				{% endfor %}
 				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">Janruary 2007 - March 2011</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">October 2004 - December 2006</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
 			</div>
 			<div class="clear"></div>
 		</section>
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Formations</h1>
+			</div>
+			
+			<div class="sectionContent">
+				{% for formation in formations %}
+				<article>
+					<h2>{{formation.getTitle}}</h2>
+					<p class="subDetails">{{ formation.getDatedebut()|date('Y-m-d') }}
+										  {{ formation.getDatefin|date('Y-m-d') }}</p>
+				</article>
+				{% endfor %}
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Loisirs</h1>
+			</div>
+			
+			<div class="sectionContent">
+				{% for loisir in loisirs %}
+				<article>
+					<h2>{{loisir.getTitle}}</h2>
+					<p class="subDetails">{{ loisir.getYear()|date('Y-m-d') }}</p>
+					<p class="subDetails">{{ loisir.getApport }}</p>
+				</article>
+				<a href="https://symfony-julesbur.c9users.io/my_cv/public/index.php/loisir/create" target="_blank">Créer</a>
+				{% endfor %}
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+	
 		
 		
 		<section>

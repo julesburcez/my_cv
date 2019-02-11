@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\Loisirs;
+use App\Entity\Loisir;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -12,11 +12,11 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  * @method Loisirs[]    findAll()
  * @method Loisirs[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class LoisirsRepository extends ServiceEntityRepository
+class LoisirRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Loisirs::class);
+        parent::__construct($registry, Loisir::class);
     }
 
     // /**
