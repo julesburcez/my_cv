@@ -24,6 +24,14 @@ class LoisirController extends Controller
             'loisirs' => $loisirRepository->findAll(),
         ]);
     }
+    
+     /**
+     * @Route("/admin")
+     */
+    public function admin()
+    {
+        return new Response('<html><body>Admin page!</body></html>');
+    }
 
     /**
      * @Route("/new", name="loisir_new", methods={"GET","POST"})

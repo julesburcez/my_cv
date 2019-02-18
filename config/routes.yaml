@@ -27,3 +27,7 @@ loisir_delete:
 valid_loisir:
     path: /loisir/valid
     controller: App\Controller\LoisirController::valid
+    
+Admin:
+    path: /admin
+    controller: App\Controller\AdminController::admin
