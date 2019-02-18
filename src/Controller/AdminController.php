@@ -14,4 +14,4 @@ class AdminController extends AbstractController
         return new Response('<html><body><p>Admin page!</p>
         </body></html>');
     }
-}
+};

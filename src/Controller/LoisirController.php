@@ -100,4 +100,4 @@ class LoisirController extends Controller
 
         return $this->redirectToRoute('app_lucky_number');
     }
-}
+};

@@ -80,4 +80,4 @@ class Loisir
 
         return $this;
     }
-}
+};
