@@ -18,7 +18,7 @@ class Loisir
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank
+     * @Assert\Type("string")
      */
     private $id;
 
