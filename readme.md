@@ -5,12 +5,12 @@ Ce CV a pour but d'être modifié et donc mis à jour régulièrement par toute 
 
 ## Fonctionalités majeures :
 
-* Tout le contenu texte est modifiable : Une fois connecté en tant qu'administrateur, vous avez accès à des boutons de modification / création / suppression.![Alt text](/admin.PNG "Modification")
+* Tout le contenu texte est modifiable : Une fois connecté en tant qu'administrateur, vous avez accès à des boutons de modification / création / suppression.![Alt text](/readimg/admin.PNG "Modification")
 * Pour la photo de l'utilisateur, ainsi que les photo de la catagorie spotlight, les liens des photos sont enregistreées en base de donnée et sont donc directement modifables via le lien.
 * Le menu renvoit à des encres sur le site et le scroll se fait à travers une fonction javascript afin d'etre plus fluide.
-* Les réalisations sont gérés via une gallerie mettant en avant les photos et vidéos que j'ai réalisé. ![Alt text](/gallerie.PNG "Tri")
+* Les réalisations sont gérés via une gallerie mettant en avant les photos et vidéos que j'ai réalisé. ![Alt text](/readimg/gallerie.PNG "Tri")
 * Il y a deux tests : un test unitaire qui teste si la classe et l'Entity Experience fonctionne, et un texte fonctionnel si la base renvoie bien le nom de l'Entity personne.
-* L'annotion @ApiResource est présente sour chaque entité. ![Alt text](/api.PNG "Modification")
+* L'annotion @ApiResource est présente sour chaque entité. ![Alt text](/readimg/api.PNG "Modification")
 * Le formulaire de contact enregistre les données sur la base de donnée.
 * Le projet est conforme selon Checkstyle.
 * Il est possible de ce connecter selon la méthode In_memory.
@@ -39,7 +39,7 @@ Puis les commandes sont accessibles via la commande suivante
 ```
  php vendor/bin/codecept run unit ExampleTest
 ```
-![Alt text](/unit.PNG "unit")
+![Alt text](/readimg/unit.PNG "unit")
 -------------------------------------------------------------------------------------------
 
 ### Ce test vérifie s'il trouve mon nom et prénom Dans la page principale du CV
@@ -47,7 +47,7 @@ Puis les commandes sont accessibles via la commande suivante
 ```
  php vendor/bin/codecept run acceptance UserCest
 ```
-![Alt text](/acceptance.PNG "acceptance")
+![Alt text](/readimg/acceptance.PNG "acceptance")
 
 ## Admin
 
@@ -55,7 +55,7 @@ Appuyer sur le bouton se connecter
 * Identifiant :  admin
 * Mot de passe : admin
 
-![Alt text](/admin.PNG "Connection")
+![Alt text](/readimg/admin.PNG "Connection")
 
 ## Auteur
 
