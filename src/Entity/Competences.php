@@ -2,18 +2,15 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Type;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\LoisirRepository")
+ * @ApiResource()
+ * @ORM\Entity(repositoryClass="App\Repository\CompetencesRepository")
  */
-class Loisir
+class Competences
 {
-    
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -22,14 +19,12 @@ class Loisir
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Type("string")
+     * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Type("string")
      */
     private $apport;
 
@@ -43,7 +38,7 @@ class Loisir
         return $this->title;
     }
 
-    public function setTitle(?string $title): self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
 

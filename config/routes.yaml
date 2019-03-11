@@ -31,3 +31,11 @@ valid_loisir:
 Admin:
     path: /admin
     controller: App\Controller\AdminController::admin
+    
+create_message:
+    path: /contact
+    controller: App\Controller\ContactController::create
+    
+valid_message:
+    path: /contact/valid
+    controller: App\Controller\ContactController::valid

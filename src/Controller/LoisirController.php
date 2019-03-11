@@ -25,9 +25,9 @@ class LoisirController extends Controller
         ]);
     }
     
-     /**
-     * @Route("/admin")
-     */
+    /**
+    * @Route("/admin")
+    */
     public function admin()
     {
         return new Response('<html><body>Admin page!</body></html>');
@@ -93,11 +93,11 @@ class LoisirController extends Controller
      */
     public function delete($id): Response
     {
-            $entityManager = $this->getDoctrine()->getManager();
-            $loisir = $entityManager->getRepository(Loisir::class)->findOneBy(['id' => $id]);
-            $entityManager->remove($loisir);
-            $entityManager->flush();
+        $entityManager = $this->getDoctrine()->getManager();
+        $loisir = $entityManager->getRepository(Loisir::class)->findOneBy(['id' => $id]);
+        $entityManager->remove($loisir);
+        $entityManager->flush();
 
         return $this->redirectToRoute('app_lucky_number');
     }
-};
+}

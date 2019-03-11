@@ -5,150 +5,205 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Joe Bloggs - Curriculum Vitae</title>
+<title>Jules Burcez - Curriculum Vitae</title>
 
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
 <meta charset="UTF-8"> 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet" href="{{ asset('style.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('menu.css') }}">
+<script src="{{asset('style.js')}}"></script>
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<body id="top">
-<div id="cv" class="instaFade">
-	<div class="mainDetails">
-		<div id="headshot" class="quickFade">
-			<img src="{{ asset('headshot.jpg') }}" alt="Alan Smith" />
-		</div>
-		
+<body>
+	
+<div class="menu-section">
+  <div class="menu-toggle">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </div>
+  <nav>
+		<ul role="navigation" class="hidden">
+			<li><a href="#forma">Formations</a></li>
+			<li><a href="#exp">Expériences</a></li>
+			<li><a href="#loisir">Loisirs</a></li>
+			<li><a href="#skill">Compétences</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+</div>
+	
+	<!-- Header-->
+	<header>
 		<div id="name">
 			<h1 class="quickFade delayTwo">Jules Burcez</h1>
-			<h2 class="quickFade delayThree">Job Title {{number}}</h2>
+			<img id="imgperso" src="/BN1A2939(1).JPG">
 		</div>
-		
-		<div id="contactDetails" class="quickFade delayFour">
-			<ul>
-				<li>e-mail: <a href="jules.burcez@gmail.com" target="_blank">jules.burcez@gmail.com</a></li>
-				<li><a href="https://portfolio-jules-burcez.000webhostapp.com">Portfolio de Jules Burcez</a></li>
-				<li>tel : 01234567890</li>
-			</ul>
-		</div>
-		<div class="clear"></div>
-	</div>
+		<p>Job Title {{number}}</p>
+	</header>
 	
-	<div id="mainArea" class="quickFade delayFive">
-		<section>
-			<article>
-				<div class="sectionTitle">
-					<h1>Profil personnel</h1>
-				</div>
-				
-				<div class="sectionContent">
-					<p>Jeune étudiant en DUT MMI (Métiers du Multimédia et de l’Internet), je suis motivé, appliqué, perfectionniste et habitué à travailler que ce soit en groupe ou seul.
-					Je possède des connaissances en communication, en programmation web ainsi qu'en audiovisuel.</p>
-				</div>
-			</article>
-			<div class="clear"></div>
+	<div class="container">
+		
+		<!-- Introduction-->
+		<section class="center">
+			<h1>Bienvenue !</h1>
+				<a class='button' href='{{path('Admin')}}' target='_blank'>Se connecter</a>
+				<a class='button' href='{{path('create_message')}}' target='_blank' id="contact">Me contacter</a>
+			
+			<p>
+				Jeune étudiant en DUT MMI (Métiers du Multimédia et de l’Internet), je suis motivé, appliqué, perfectionniste et habitué à travailler que ce soit en groupe ou seul.
+					Je possède des connaissances en communication, en programmation web ainsi qu'en audiovisuel.
+			</p>
 		</section>
 		
+		<hr>
 		
-		<section>
-			<div class="sectionTitle">
-				<h1>Expériences</h1>
+		<!-- Gallery Block-->
+		<section class="gallery">
+			<h1 class="center">Gallerie</h1>
+			<div class="row">
+				<a href="#"><img src="/splash-screen-dokkan-battle-V2.png" class="grid-2"></a>
+				<a href="#"><img src="img/re.png" class="grid-2"></a>
+				<a href="#"><img src="img/re.png" class="grid-2"></a>
+				<a href="#"><img src="img/re.png" class="grid-2"></a>
+				<a href="#"><img src="img/re.png" class="grid-2"></a>
+				<a href="#"><img src="img/re.png" class="grid-2"></a>
 			</div>
+		</section>
+		
+		<!-- Testimonials-->	
+	{#	<section class="testimonial">#}
+	{#		<div class="row">#}
+	{#			<div class="grid-2">#}
+	{#				<img src="img/re.png">#}
+	{#				<h2>Their Name</h2>#}
+	{#				<p>You can use this as a place to put recommendations, accolades and testimonials</p>#}
+	{#			</div>#}
+				
+	{#			<div class="grid-2">#}
+	{#				<img src="img/re.png">#}
+	{#				<h2>Their Name</h2>#}
+	{#				<p>You can use this as a place to put recommendations, accolades and testimonials</p>#}
+	{#			</div>#}
+		
+	{#			<div class="grid-2">#}
+	{#				<img src="img/re.png">#}
+	{#				<h2>Their Name</h2>#}
+	{#				<p>You can use this as a place to put recommendations, accolades and testimonials</p>#}
+	{#			</div>#}
+	{#		</div>#}
+	{#	</section>#}
+	
+	</div> <!-- End container-->
+	
+	<!-- Spotlight -->
+	<section class="spotlight">
+		<div class="container">
+			<div class="row">
+				<div class="grid-3">
+					<img src="img/spotlight.jpg">
+				</div>
+				<div class="grid-3">
+					<h1>Mon portfolio</h1>
+					<p>Portfolio que j'ai réalisé pour montrer mes réalisations à de futures écoles ou employeurs.</p>
+					<a href="https://portfolio-jules.000webhostapp.com/">Voir le portfolio</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!-- New container-->
+	<div class="container">
+		<section class="education" id="forma">
+			<h1>Formations</h1>
+				{% for formation in formations %}
+			<article>
+			<h2>{{formation.getTitle}}</h2>
+			<p class="subDetails">{{ formation.getDatedebut()|date('Y-m-d') }}
+										  {{ formation.getDatefin|date('Y-m-d') }}</p>
+				</article>
+				{% if is_granted('ROLE_ADMIN') %}
+					<a class="button" href="{{ path('formations_new') }}" target="_blank">Créer</a>
+					<a class="button" href="{{ path('formations_edit',{'id': formation.id}) }}" target="_blank">Editer</a>
+					<a class="button" href="{{ path('formations_delete',{'id': formation.id}) }}" target="_blank">Supprimer</a>
+				{% endif %}
+				{% endfor %}
+		</section>
+		
+		<hr>
 			
-			<div class="sectionContent">
+		<!--Experience Tables-->
+		<section class="experience" id="exp">
+				<h1>Expériences</h1>
 				{% for experience in experiences %}
 				<article>
 					<h2>{{experience.getTitle}}</h2>
 					<p class="subDetails">{{ experience.getDatedebut()|date('Y-m-d') }}
-										  {{ experience.getDatefin|date('Y-m-d') }}</p>
-				</article>
-				{% if is_granted('ROLE_ADMIN') %}
-					<a href="{{ path('experience_new') }}" target="_blank">Créer</a>
-					<a href="{{ path('experience_edit',{'id': experience.id}) }}" target="_blank">Editer</a>
-					<a href="{{ path('experience_delete',{'id': experience.id}) }}" target="_blank">Supprimer</a>
+						{{ experience.getDatefin|date('Y-m-d') }}</p>
+					</article>
+					{% if is_granted('ROLE_ADMIN') %}
+					<a class="button" href="{{ path('experience_new') }}" target="_blank">Créer</a>
+					<a class="button" href="{{ path('experience_edit',{'id': experience.id}) }}" target="_blank">Editer</a>
+					<a class="button" href="{{ path('experience_delete',{'id': experience.id}) }}" target="_blank">Supprimer</a>
 				{% endif %}
 				{% endfor %}
-				
-			</div>
-			<div class="clear"></div>
 		</section>
 		
-		<section>
-			<div class="sectionTitle">
-				<h1>Formations</h1>
-			</div>
+		<hr>
 			
-			<div class="sectionContent">
-				{% for formation in formations %}
-				<article>
-					<h2>{{formation.getTitle}}</h2>
-					<p class="subDetails">{{ formation.getDatedebut()|date('Y-m-d') }}
-										  {{ formation.getDatefin|date('Y-m-d') }}</p>
-				</article>
-				{% if is_granted('ROLE_ADMIN') %}
-					<a href="{{ path('formations_new') }}" target="_blank">Créer</a>
-					<a href="{{ path('formations_edit',{'id': formation.id}) }}" target="_blank">Editer</a>
-					<a href="{{ path('formations_delete',{'id': formation.id}) }}" target="_blank">Supprimer</a>
-				{% endif %}
-				{% endfor %}
-				
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-		<section>
-			<div class="sectionTitle">
+		<!--Loisirs Tables-->
+		<section class="loisir" id="loisir">
 				<h1>Loisirs</h1>
-			</div>
-			
-			<div class="sectionContent">
-				{% for loisir in loisirs %}
-				<article>
-					<h2>{{loisir.getTitle}}</h2>
-					<p class="subDetails">{{ loisir.getYear()|date('Y-m-d') }}</p>
-					<p class="subDetails">{{ loisir.getApport }}</p>
-				</article>
-				{% if is_granted('ROLE_ADMIN') %}
-					<a href="{{ path('loisir_new') }}" target="_blank">Créer</a>
-					<a href="{{ path('loisir_edit',{'id': loisir.id}) }}" target="_blank">Editer</a>
-					<a href="{{ path('loisir_delete',{'id': loisir.id}) }}" target="_blank">Supprimer</a>
-				{% endif %}
-				{% endfor %}
+			{% for loisir in loisirs %}
+					<article>
+						<h2>{{loisir.getTitle}}</h2>
+						<p class="subDetails">{{ loisir.getApport }}</p>
+					</article>
+					{% if is_granted('ROLE_ADMIN') %}
+						<a class="button" href="{{ path('loisir_new') }}" target="_blank">Créer</a>
+						<a class="button" href="{{ path('loisir_edit',{'id': loisir.id}) }}" target="_blank">Editer</a>
+						<a class="button" href="{{ path('loisir_delete',{'id': loisir.id}) }}" target="_blank">Supprimer</a>
+					{% endif %}
+					{% endfor %}
+		</section>
+		
+		<hr>
+		
+		<section class="skills" id="skill">
+			<!--List of skills-->
+					<h1>Compétences</h1>
+						{% for competence in competences %}
+						<article>
+							<h2>{{competence.getTitle}}</h2>
+							<p class="subDetails">{{ competence.getApport }}</p>
+						</article>
+						{% if is_granted('ROLE_ADMIN') %}
+							<a class="button" href="{{ path('competences_new') }}" target="_blank">Créer</a>
+							<a class="button" href="{{ path('competences_edit',{'id': competence.id}) }}" target="_blank">Editer</a>
+							<a class="button" href="{{ path('competences_delete',{'id': competence.id}) }}" target="_blank">Supprimer</a>
+						{% endif %}
+						{% endfor %}
 				
-			</div>
-			<div class="clear"></div>
+				
 		</section>
+		
+		
+		<!--Footer-->
+		<footer class="center">
+			<hr>
+			<span>&copy; Jules Burcez 2019</span>
+		</footer>
+		
+	</div><!-- End Container -->
 	
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Compétences</h1>
-			</div>
-			
-			<div class="sectionContent">
-				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-				</ul>
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-	</div>
-</div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

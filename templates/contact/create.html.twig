@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<link type="text/css" rel="stylesheet" href="{{asset('contact.css')}}">
+	<div id="project_header">
+  <p class="main_header">Contactez-moi</p>
+</div>
+<div id="content">
+  <div class="text_box_main">
+   <p class="body_text_header">Formulaire de contact</p>
+   <div class="body_code_main">
+    	{{ form_start(form, {'action': path('valid_message') }) }} 
+		{{ form(form) }}
+	</div>
+</div>
+</html>

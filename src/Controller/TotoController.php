@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\Experience;
 use App\Entity\Formations;
 use App\Entity\Loisir;
+use App\Entity\Competences;
 
 class TotoController extends Controller
 {
@@ -30,9 +31,9 @@ class TotoController extends Controller
     
     public function number()
     {
-     $number = random_int(0, 100); 
+        $number = random_int(0, 100);
     
-     $experiences = $this->getDoctrine()
+        $experiences = $this->getDoctrine()
             ->getRepository(Experience::class)->findAll();
     
         if (!$experiences) {
@@ -41,7 +42,7 @@ class TotoController extends Controller
             );
         }
         
-    $formations = $this->getDoctrine()
+        $formations = $this->getDoctrine()
             ->getRepository(Formations::class)->findAll();
     
         if (!$formations) {
@@ -50,7 +51,16 @@ class TotoController extends Controller
             );
         }
         
-    $loisirs = $this->getDoctrine()
+        $competences = $this->getDoctrine()
+            ->getRepository(Competences::class)->findAll();
+
+        if (!$competences) {
+            throw $this->createNotFoundException(
+                'No product found for id '
+            );
+        }
+        
+        $loisirs = $this->getDoctrine()
             ->getRepository(Loisir::class)->findAll();
     
         if (!$loisirs) {
@@ -65,21 +75,22 @@ class TotoController extends Controller
             'experiences' => $experiences,
             'formations' => $formations,
             'loisirs' => $loisirs,
+            'competences' => $competences,
         ));
     }
 
     
-    public function BDD(){
-
-    $DateDebut="14-05-2015";
-    $DateFin="21-05-2015";
+    public function BDD()
+    {
+        $DateDebut="14-05-2015";
+        $DateFin="21-05-2015";
     
-    $xp = new Experience();
-    $xp->setTitle(‘Dentiste’);
-    $xp->setDateDebut=(\DateTime::createFromFormat('d-m-y',$DateDebut));
-    $xp->setDateFin=(\DateTime::createFromFormat('d-m-y',$DateFin));
-    $eManager = $this->getDoctrine()->getManager();
-    $eManager->persist($xp);
-    $eManager->flush();
+        $xp = new Experience();
+        $xp->setTitle(‘Dentiste’);
+        $xp->setDateDebut=(\DateTime::createFromFormat('d-m-y', $DateDebut));
+        $xp->setDateFin=(\DateTime::createFromFormat('d-m-y', $DateFin));
+        $eManager = $this->getDoctrine()->getManager();
+        $eManager->persist($xp);
+        $eManager->flush();
     }
 }
