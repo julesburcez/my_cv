@@ -1,78 +1,74 @@
 # S4C2 Jules_Burcez CV
 
-J'ai voulus crée ce Cv dans le but qu'il soit le plus modifiable possible, afin d'etre réutilisable par d'autre mais aussi avec la possibilité d'etre mit a jour rapidement et simplement.
+Ce CV a pour but d'être modifié et donc mis à jour régulièrement par toute personne le souhaitant.
 
 
-## Fonctionalités majeurs:
+## Fonctionalités majeures :
 
-* Tout le contenu texte est modifiable: une fois connecté en tant qu'administrateur vous avez accès a des bouton de modification / création / supression.![Alt text](/readimg/admin.PNG "Modification")
-* Pour la photo de l'utilisateur, ainsi que les photo de la catagorie spotlight, les liens des photos sont enregistrer en base de donné et sont donc directement modifable vien le lien.
-* La catégorie spotlight mais en avant des réalisation de manière aléatoire.![Alt text](/readimg/spot.PNG "Mise en avant")
-* La modification de votre niveau en langue modifie la classe Css et met a jour directement le nombre de point colorié. ![Alt text](/readimg/lang.PNG "Langues")
-* Le menu renvoie a des encre sur le site et le scroll ce fait a travers une fonction javascript afin d'etre plus fluide.
-* Les réalisation sont gérés dans un Isotope, soit il est possible au visiteur de trié les créations a l'aide des bouton. ![Alt text](/readimg//tri.PNG "Tri")
-* Il y a deux test , un test unitaire qui test si la class et l'Entity Experience fonctionne, et un texte fonctionnel si la base renvoie bien le nom de l'Entity personne.
-* L'annotion @ApiResource est présente sour chaque entité. ![Alt text](/readimg/api.PNG "Modification")
+* Tout le contenu texte est modifiable : Une fois connecté en tant qu'administrateur, vous avez accès à des boutons de modification / création / suppression.![Alt text](/admin.PNG "Modification")
+* Pour la photo de l'utilisateur, ainsi que les photo de la catagorie spotlight, les liens des photos sont enregistreées en base de donnée et sont donc directement modifables via le lien.
+* Le menu renvoit à des encres sur le site et le scroll se fait à travers une fonction javascript afin d'etre plus fluide.
+* Les réalisations sont gérés via une gallerie mettant en avant les photos et vidéos que j'ai réalisé. ![Alt text](/gallerie.PNG "Tri")
+* Il y a deux tests : un test unitaire qui teste si la classe et l'Entity Experience fonctionne, et un texte fonctionnel si la base renvoie bien le nom de l'Entity personne.
+* L'annotion @ApiResource est présente sour chaque entité. ![Alt text](/api.PNG "Modification")
 * Le formulaire de contact enregistre les données sur la base de donnée.
-* Le projet est selon Checkstyle conforme.
-* Il et possible de ce connecter selon la méthode In_memory.
+* Le projet est conforme selon Checkstyle.
+* Il est possible de ce connecter selon la méthode In_memory.
 * Le site est responsive.
 
 ### Prerequis
 
-Afin de se connecter au CV le lien est le [suivant](https://symphony-allardnathanael.c9users.io/my_cv/public/index.php/)
+Afin de se connecter au CV le lien est le [suivant.](https://symfony-julesbur.c9users.io/my_cv/public/index.php)
 
 ## Installation
 
-Crée un dossier my_cv puis glissé les éléments a l'interieure.
+Créez un dossier my_cv puis glissez les éléments a l'intérieur.
 
 ```
 cd my_cv
 ```
-Puis les commandes sont accessible via la commande 
+Puis les commandes sont accessibles via la commande suivante
 
 ```
  php bin/console
 ```
 ## Les tests
 
-### Ce test vérifie si l'Entity Experience fonctionne et ajoute bien les titre grace au fonction SetTitle
+### Ce test vérifie si l'Entity Experience fonctionne et ajoute bien les titres grâce au fonction SetTitle
 
 ```
  php vendor/bin/codecept run unit ExampleTest
 ```
-![Alt text](/readimg/assertion.PNG "assertion")
+![Alt text](/unit.PNG "unit")
 -------------------------------------------------------------------------------------------
 
-### Ce test vérifie si il trouve mon nom et prénom Dans la page principale du CV
+### Ce test vérifie s'il trouve mon nom et prénom Dans la page principale du CV
 
 ```
- php vendor/bin/codecept run acceptance SigninCest
+ php vendor/bin/codecept run acceptance UserCest
 ```
-![Alt text](/readimg/accept.PNG "acceptance")
+![Alt text](/acceptance.PNG "acceptance")
 
 ## Admin
 
 Appuyer sur le bouton se connecter
 * Identifiant :  admin
-* Mot de passe : moi
+* Mot de passe : admin
 
-![Alt text](/readimg/admin.PNG "Connection")
+![Alt text](/admin.PNG "Connection")
 
 ## Auteur
 
-* **Coquil** - *Initiateur* -
-* **Allard Nathanael**
+* **Jules Burcez**
 
 ## Idée d'amélioration
 
-### Premièrement des amélioration graphique
+### Premièrement des améliorations graphiques
 * Un fond derriere le Header
-* Les langues en lignes
-* Une section compétences plus complètes avec des graphiques
+* Ajout des connaissances de langues
+* Une section compétences plus complète avec des graphiques plus développés
 
 ### Amélioration technique
 
 * Mot de passe et login en base de donnée
-* Les images directement modifable ( si possible ) sans passé par le projet symphony
-* Le bouton Voir le projet ne marche pas
+* Les images directement modifables (si possible) sans passer par le projet symphony
